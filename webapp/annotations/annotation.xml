@@ -1,0 +1,437 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/BankTransaction/$metadata">
+        <edmx:Include Namespace="BankTransaction"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="BankTransaction.BankTransaction">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ID"/>
+                            <PropertyValue Property="Label" String="{@i18n>id}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="paymentDate"/>
+                            <PropertyValue Property="Label" String="{@i18n>paymentDate}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="cardFlag_ID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="cardNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>cardNumber}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="modality"/>
+                            <PropertyValue Property="Label" String="{@i18n>modality}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="terminalNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>terminalNumber}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="comercialInstitute"/>
+                            <PropertyValue Property="Label" String="{@i18n>comercialInstitute}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="grossValue"/>
+                            <PropertyValue Property="Label" String="{@i18n>grossValue}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="netValue"/>
+                            <PropertyValue Property="Label" String="{@i18n>netValue}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="uniqueSequentialNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>uniqueSequentialNumber}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="authorizationNumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>authorizationNumber}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="currentPortion"/>
+                            <PropertyValue Property="Label" String="{@i18n>currentPortion}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="foreignCard"/>
+                            <PropertyValue Property="Label" String="{@i18n>foreignCard}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="createdBy"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="createdAt"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="modifiedBy"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="modifiedAt"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionPresentationVariant" Qualifier="tableView">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="PresentationVariant">
+                            <Record Type="UI.PresentationVariantType">
+                                <PropertyValue Property="Visualizations">
+                                    <Collection>
+                                        <AnnotationPath>@UI.LineItem</AnnotationPath>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
+                                    <Collection/>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem" Qualifier="tableView">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="UI.SelectionPresentationVariant" Qualifier="tableView1">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="PresentationVariant">
+                            <Record Type="UI.PresentationVariantType">
+                                <PropertyValue Property="Visualizations">
+                                    <Collection>
+                                        <AnnotationPath>@UI.LineItem#tableView</AnnotationPath>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
+                                    <Collection/>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem" Qualifier="tableView1">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="UI.SelectionPresentationVariant" Qualifier="tableView2">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="PresentationVariant">
+                            <Record Type="UI.PresentationVariantType">
+                                <PropertyValue Property="Visualizations">
+                                    <Collection>
+                                        <AnnotationPath>@UI.LineItem#tableView1</AnnotationPath>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
+                                    <Collection/>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>paymentDate</PropertyPath>
+                        <PropertyPath>cardFlag_ID</PropertyPath>
+                        <PropertyPath>cardNumber</PropertyPath>
+                        <PropertyPath>terminalNumber</PropertyPath>
+                        <PropertyPath>uniqueSequentialNumber</PropertyPath>
+                        <PropertyPath>authorizationNumber</PropertyPath>
+                        <PropertyPath>comercialInstitute</PropertyPath>
+                        <PropertyPath>currentPortion</PropertyPath>
+                        <PropertyPath>ID</PropertyPath>
+                        <PropertyPath>modality</PropertyPath>
+                        <PropertyPath>grossValue</PropertyPath>
+                        <PropertyPath>netValue</PropertyPath>
+                        <PropertyPath>foreignCard</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>mainInformation}"/>
+                            <PropertyValue Property="ID" String="MainInformation"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#MainInformation"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>transaction}"/>
+                            <PropertyValue Property="ID" String="Transaction"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Transaction"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>values}"/>
+                            <PropertyValue Property="ID" String="Values"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Values"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>logggingInformation}"/>
+                            <PropertyValue Property="ID" String="LoggingInformation"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#LoggingInformation"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="MainInformation">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="cardFlag_ID"/>
+                                    <PropertyValue Property="Label" String="{@i18n>cardFlag}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="cardNumber"/>
+                                    <PropertyValue Property="Label" String="{@i18n>cardNumber}"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modality"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="currentPortion"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="foreignCard"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="LoggingInformation">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdBy"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedBy"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Transaction">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="paymentDate"/>
+                                </Record>                            
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="terminalNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="comercialInstitute"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="uniqueSequentialNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="authorizationNumber"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Values">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="grossValue"/>
+                                </Record>
+
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="netValue"/>
+                                </Record>
+</Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="LoggingInformation1">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdBy"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedBy"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeNamePlural" String="{@i18n>bankTransactions}"/>
+                        <PropertyValue Property="TypeName" String="{@i18n>bankTransaction}"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="ID"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="TypeImageUrl" String=""/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Values1">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="grossValue"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="netValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="grossValue">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="grossValue"/>
+                        <PropertyValue Property="Title" String="grossValue"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="netValue">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="netValue"/>
+                        <PropertyValue Property="Title" String="netValue"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/authorizationNumber">
+                <Annotation Term="Common.Label" String="{@i18n>authorizationNumber}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/cardFlag">
+                <Annotation Term="Common.Label" String="{@i18n>cardFlag}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/cardNumber">
+                <Annotation Term="Common.Label" String="{@i18n>cardNumber}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/comercialInstitute">
+                <Annotation Term="Common.Label" String="{@i18n>comercialInstitute}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/currentPortion">
+                <Annotation Term="Common.Label" String="{@i18n>currentPortion}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/foreignCard">
+                <Annotation Term="Common.Label" String="{@i18n>foreignCard}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/grossValue">
+                <Annotation Term="Common.Label" String="{@i18n>grossValue}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/ID">
+                <Annotation Term="Common.Label" String="{@i18n>id}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/modality">
+                <Annotation Term="Common.Label" String="{@i18n>modality}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/netValue">
+                <Annotation Term="Common.Label" String="{@i18n>netValue}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/paymentDate">
+                <Annotation Term="Common.Label" String="{@i18n>paymentDate}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/terminalNumber">
+                <Annotation Term="Common.Label" String="{@i18n>terminalNumber}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/uniqueSequentialNumber">
+                <Annotation Term="Common.Label" String="{@i18n>uniqueSequentialNumber}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.MDCardFlag/createdBy">
+                <Annotation Term="Common.Text" Path="description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextLast"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="BankTransaction.MDCardFlag/description">
+                <Annotation Term="Common.Text" Path="createdBy">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextSeparate"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="BankTransaction.MDCardFlag">
+                <Annotation Term="UI.PresentationVariant" Qualifier="vh_BankTransaction_cardNumber">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="description"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant" Qualifier="vh_BankTransaction_cardFlag_ID">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="ID"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="BankTransaction.BankTransaction/cardFlag_ID">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="MDCardFlag"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="cardFlag_ID"/>
+                                    <PropertyValue Property="ValueListProperty" String="ID"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="PresentationVariantQualifier" String="vh_BankTransaction_cardFlag_ID"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.Text" Path="cardFlag/description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+</Annotation>
+                <Annotation Term="Common.Label" String="{@i18n>cardFlag}"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.MDCardFlag/ID">
+                <Annotation Term="Common.Text" Path="description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+                <Annotation Term="Common.Label" String="cardFlag/ID"/>
+            </Annotations>
+            <Annotations Target="BankTransaction.MDCardFlag/code">
+                <Annotation Term="Common.Label" String="cardFlag/code"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
